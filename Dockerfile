@@ -2,7 +2,7 @@
 # Run spring boot in Docker
 FROM openjdk:11
 
-COPY --from=build /opt/app/target/*.jar claims.jar
+COPY /target/*.jar claims.jar
 
 ENV PORT 9001
 EXPOSE $PORT
