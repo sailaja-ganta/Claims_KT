@@ -1,0 +1,6 @@
+spring: 
+  cloud:
+    config:
+      enabled: true
+      uri: 
+        - http//18.143.121.64:8888
