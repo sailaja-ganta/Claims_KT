@@ -12,7 +12,7 @@ node
   stage("Docker build")
   {
     sh "docker build -t claims-image ."
-    sh "dokcer images"
+    sh "docker images"
   }
   stage("Docker run")
   {
