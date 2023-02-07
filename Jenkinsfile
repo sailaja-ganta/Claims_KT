@@ -6,13 +6,13 @@ node
   }
   stage ("Docker Build")
   {
-    sh "sudo systemctl restart docker"
-    sh "sudo docker build -t claims-ui-image ."
-    sh "sudo docker images"
+    
+    sh " docker build -t claims-ui-image ."
+    sh " docker images"
   }
   stage("Docker run")
   {
-    sh "sudo docker run -d -p 80:80 --name claims-ui-container claims-ui-image"
-    sh "sudo docker ps"
+    sh " docker run -d -p 80:80 --name claims-ui-container claims-ui-image"
+    sh " docker ps"
   }
 }
