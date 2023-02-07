@@ -2,7 +2,7 @@ node
 {
   stage("Git clone")
   {
-    gti branch : "Claims-UI" , url : "https://github.com/DurgaRaoGopu/Cliams_KT.git"
+    git branch : "Claims-UI" , url : "https://github.com/DurgaRaoGopu/Cliams_KT.git"
   }
   stage ("Docker Build")
   {
