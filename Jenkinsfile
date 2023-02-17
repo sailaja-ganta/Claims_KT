@@ -4,7 +4,12 @@ node
   {
     git branch : "eureka-server" , url : "https://github.com/DurgaRaoGopu/Claims_KT.git"
    }
-  stage ("containarization")
+  stage ("Maven Clean&Install")
+  {
+    sh "mvn clean"
+    sh "mvn install"
+  }
+  stage ("containerization")
   {
     sh "docker rm -f eureka-server-container"
     sh "docker rmi eureka-server-image"
