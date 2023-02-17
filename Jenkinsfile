@@ -11,8 +11,8 @@ node
   }
   stage("Docker build")
   {
-    sh "docker rm -f claims-container"
-    sh "docker rmi claims-image"
+//     sh "docker rm -f claims-container"
+//     sh "docker rmi claims-image"
     sh "docker build -t claims-image ."
     sh "docker images"
   }
