@@ -11,8 +11,8 @@ node
   }
   stage ("containerization")
   {
-    sh "docker rm -f eureka-server-container"
-    sh "docker rmi eureka-server-image"
+    sh "docker rm -f eureka-server-container||true"
+    sh "docker rmi eureka-server-image||true"
     sh "docker build -t eureka-server-image ."
     sh "docker run -d -p 8761:8761 --name eureka-server-container eureka-server-image"
   }
