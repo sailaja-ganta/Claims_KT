@@ -11,7 +11,9 @@ node
   }
   stage ("containerization")
   {
-    sh "docker build -t configsrver-image ."
+    sh "docker rm -f config-server-container"
+    sh "docker rmi configserver-image"
+    sh "docker build -t configserver-image ."
     sh "docker run -d -p 8888:8888 --name config-server-container configserver-image"
   }
 }
