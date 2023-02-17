@@ -4,6 +4,11 @@ node
   {
     git branch : "Config-Server" , url : "https://github.com/DurgaRaoGopu/Claims_KT.git"
   }
+  stage("Maven Clean&Install")
+  {
+    sh "mvn clean"
+    sh "mvn install"
+  }
   stage ("containerization")
   {
     sh "docker rm -f config-server-container"
